@@ -38,5 +38,9 @@ public class ProductoController {
         return productoService.actualizarProducto(producto);
     }
 
+    @GetMapping("/buscarNombre/{nombre}")
+    public Producto buscarProductoNombre(@PathVariable String nombre){
+        return productoService.buscarProductoNombre(nombre);
+    }
 }
 

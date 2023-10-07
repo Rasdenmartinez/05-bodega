@@ -31,6 +31,11 @@ public class ProductoService {
     public Producto actualizarProducto(Producto producto){
         return (Producto) productoRepository.save(producto);
     }
+
+    public Producto buscarProductoNombre(String nombre){
+
+        return productoRepository.findByNombre(nombre);
+    }
 }
 
 

@@ -36,6 +36,21 @@ public class ProductoService {
 
         return productoRepository.findByNombre(nombre);
     }
+
+    public Producto buscarProductoExistencia(Integer existencia){
+
+        return productoRepository.findByExistencia(existencia);
+    }
+
+    public Producto buscarProductoCodigo(String codigo){
+        return productoRepository.findByCodigo(codigo);
+    }
+
+    public Producto buscarProductoPrecio(Double precio){
+
+        return productoRepository.findByPrecio(precio);
+    }
+
 }
 
 

@@ -42,5 +42,21 @@ public class ProductoController {
     public Producto buscarProductoNombre(@PathVariable String nombre){
         return productoService.buscarProductoNombre(nombre);
     }
+
+    @GetMapping("/buscarExistencia/{existencia}")
+    public Producto buscarProductoExistencia(@PathVariable Integer existencia){
+        return productoService.buscarProductoExistencia(existencia);
+    }
+
+    @GetMapping("/buscarCodigo/{codigo}")
+    public Producto buscarProductoCodigo(@PathVariable String codigo){
+        return productoService.buscarProductoCodigo(codigo);
+    }
+
+    @GetMapping("/buscarPrecio/{precio}")
+    public Producto buscarProductoPrecio(@PathVariable Double precio){
+        return productoService.buscarProductoPrecio(precio);
+    }
+
 }
 
